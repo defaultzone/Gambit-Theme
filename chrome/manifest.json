@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GambitTheme",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://forum.gambit-rp.ru/*"],
+      "js": [
+        "main/main.js",
+        "common/properties.js"
+      ],
+      "css": ["main/style.css"]
+    }
+  ],
+  "action": {
+    "default_title": "GambitTheme",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

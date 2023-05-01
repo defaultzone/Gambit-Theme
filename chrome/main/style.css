@@ -1,0 +1,126 @@
+:root
+{
+    --primary-color: #2669a2;
+    --secondary-color: #4290d3;
+
+    /* Text */
+    --light-and-bold-text: #7082a7;
+    --light-text: #a0afce;
+    --block-title-text: #fff;
+    --normal-text: #384764;
+    --link-text: #2669A2;
+
+    /* Backrounds: sections, footer and header. */
+    --header-background: #fff;
+    --section-background: #fff;
+    --sub-section-background: #ecf2fa;
+    --footer-background: #ecf2fa;
+    --body-background: #ededed;
+
+    /* Gradient */
+    --gradient-start: var(--primary-color);
+    --gradient-start-alpha: 0%;
+    --gradient-end: var(--secondary-color);
+    --gradient-end-alpha: 100%;
+
+    /* .notice.notice--primary */
+    --notice-icon-background: var(--primary-color);
+    --notice-text-color: var(--normal-text);
+    --notice-background: var(--section-background);
+    --notice-border: var(--primary-color);
+
+    /* .far, .fa, .fas, .fab, .fal | i[aria-hidden]:after */
+    --icon-color: #acb3c1;
+}
+
+.block--category .block-header,
+.p-nav-list .p-navEl.is-selected:after
+{
+    background: linear-gradient(
+            -270deg, var(--gradient-start) var(--gradient-start-alpha), var(--gradient-end) var(--gradient-end-alpha)
+    ) !important;
+    color: var(--block-title-text) !important;
+}
+
+.notice.notice--primary .uix_noticeIcon
+{
+    background: var(--notice-icon-background) !important;
+}
+
+.notice.notice--primary
+{
+    color: var(--notice-text-color) !important;
+    background: var(--notice-background) !important;
+    border: 2px solid var(--notice-border) !important;
+}
+
+.far, .fa, .fas, .fab, .fal, i[aria-hidden]:after
+{
+    color: var(--icon-color) !important;
+}
+
+/* Backrounds: sections, footer and header. */
+.p-nav,
+.p-pageWrapper .p-navSticky.is-sticky .p-nav
+{   /* Header */
+    background: var(--header-background) !important;
+}
+
+.uix_sidebarInner:not(.offCanvasMenu-content) .block .block-body,
+.block-container
+{   /* Sections */
+    background: var(--section-background) !important;
+}
+
+.block-footer
+{   /* Sub section */
+    background: var(--sub-section-background) !important;
+}
+
+.p-footer,
+.p-footer-inner
+{   /* Footer */
+    background: var(--footer-background) !important;
+}
+
+html
+{   /* Body background */
+    background: var(--body-background) !important;
+}
+
+/* Highlighting text(their color) */
+
+/* Light and bold text (#7082a7) */
+.block-minorHeader,
+.p-body-sidebar .block-minorHeader:before
+{
+    color: var(--light-and-bold-text) !important;
+}
+
+/* Light text (#a0afce) */
+.contentRow-minor,
+.pairs>dt,
+.node-extra-row,
+.node-description,
+.p-footer-copyrightRow,
+.p-nav-list .p-navEl,
+.p-nav
+{
+    color: var(--light-text) !important;
+}
+
+/* Normal text(#384764) */
+.node-title,
+.node-subNodeFlatList>li a,
+.p-footer-inner a,
+.bbWrapper,
+.uix_sidebarInner:not(.offCanvasMenu-content) .block .block-body
+{
+    color: var(--normal-text) !important;
+}
+
+/* Link text (#2669A2) */
+a.username
+{
+    color: var(--link-text)
+}
